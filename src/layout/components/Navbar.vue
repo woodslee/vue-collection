@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       sidebar: {
-        opened: true
+        opened: false
       }
     }
   },
@@ -61,7 +61,9 @@ export default {
   },
   methods: {
     toggleSideBar() {
-      this.$store.dispatch('app/toggleSideBar')
+      // this.$store.dispatch('app/toggleSideBar')
+      console.info('to toggle side bar:',!this.sidebar.opened)
+      this.sidebar.opened = !this.sidebar.opened
     },
     async logout() {
       await this.$store.dispatch('user/logout')
@@ -73,7 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  height: 50px;
+  height: 40px;
   overflow: hidden;
   position: relative;
   background: #fff;

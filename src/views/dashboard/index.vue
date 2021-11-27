@@ -5,14 +5,15 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 
 export default {
-  name: "Dashboard",
-  computed: {
-    ...mapGetters(["name"]),
-  },
-};
+  name: 'Dashboard',
+  data: function() {
+    return {
+      name: 'Hello'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

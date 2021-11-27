@@ -24,6 +24,7 @@ export default {
   },
   methods: {
     toggleClick() {
+      console.info('toggle click from hanburger')
       this.$emit('toggleClick')
     }
   }
